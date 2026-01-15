@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sirivennela&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>IGRICA</title>
+</head>
+<body>
+
+    <div id="pocetniprozor" class="pocetna">
+        <video id="video" autoplay muted loop>
+            <source src="videopozadina.mp4" type="video/mp4">
+        </video>
+        <h1>LOV NA KRUGOVE</h1>
+        <button id="dugmestart">START</button>
+    </div>
+
+    <div id="drugiprozor" class="prozor2">
+         <video id="video2" autoplay muted loop>
+            <source src="videopozadina2.mp4" type="video/mp4">
+        </video>
+        <h2>IZABERI KOŽU</h2>
+        <div id="poeni">Trenutni poeni: <span id="brojac">0</span></div>
+        <button id="dugmepocetak">START THE GAME</button>
+        <div class="loptice">
+            <span class="boja" style="background-color: blue;" onclick="promijeniboju('blue')"></span>
+             <span class="boja" style="background-color: rgb(255, 0, 0);" onclick="promijeniboju('rgb(255, 0, 0)')"></span>
+              <span class="boja" style="background-color: rgb(255, 0, 238);" onclick="promijeniboju('rgb(255, 0, 238)')"></span>
+               <span class="boja" style="background-color: rgb(0, 255, 26);" onclick="promijeniboju('rgb(0, 255, 26)')"></span>
+        </div>
+        <canvas id="canvas2" width="800" height="500"></canvas>
+    </div>
+    <div id="kontrole">
+        <button id="darkmode">Light</button>
+        <button id="sound"> ON</button>
+    </div>
+    <audio id="zvuk" loop>
+        <source src="muzika.mp3" type="audio/mp3">
+    </audio>
+    <div id="treciprozor" class="prozor3">
+        <h2>GAME OVER</h2>
+        <div class="restartdugmad">
+        <button id="dugmerestart">RESTART</button>
+        <button id="dugmepocetak2">VRATI NA POČETAK</button>
+    </div></div>
+    <div id="timer">00:40</div>
+    <div id="cetvrtiprozor" class="prozor4">
+        <h2>YOU WIN!</h2>
+        <div class="restartdugmad">
+            <button id="dugmerestart2">RESTART</button>
+        <button id="dugmepocetak3">VRATI NA POČETAK</button>
+        </div>
+    </div>
+    <div id="specijalnisat" class="prozor5">
+        <h2>SPECIAL 5 SEC</h2>
+    </div>
+    <audio id="efekat">
+        <source src="bonus.mp3" type="audio/mp3">
+    </audio>
+    <audio id="zvukpobjede">
+        <source src="aplauz.mp3" type="audio/mp3">
+    </audio>
+    <audio id="zvukporaza">
+        <source src="poraz.mp3" type="audio/mp3">
+    </audio>
+    <div id="igrabrojac">
+        Poeni: <span id="igricapoeni">0</span>
+    </div>
+    <canvas id="canvas" width="500" height="500"></canvas>
+    <script src="main.js"></script>
+</body>
+</html>
